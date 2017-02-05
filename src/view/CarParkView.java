@@ -9,7 +9,11 @@ import javax.swing.JPanel;
 
 import model.Car;
 import model.Location;
-
+/*
+* Klasse CarParkView
+* Author: Par-Kings
+* Version: 4-2-2017
+*/
 public class CarParkView extends JPanel {
     
 	private static final long serialVersionUID = 1L;
@@ -51,7 +55,9 @@ public class CarParkView extends JPanel {
         }
     }
 
-    
+    /*
+     * updateview: deze haalt informatie op uit mainwindow en geeft deze weer op het scherm.
+     */
     public void updateView() {
         // Create a new car park image if the size has changed.
         if (!size.equals(getSize())) {

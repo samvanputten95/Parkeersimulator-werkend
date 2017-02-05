@@ -21,6 +21,9 @@ public class Controller extends AbstractController {
 
 	@Override
 	
+	/**
+	 * actionhandler. Deze zorgt ervoor dat alle handelingen van de knoppen worden uitgevoerd.
+	 */
 	
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

@@ -1,7 +1,11 @@
 package model;
 
 import java.awt.*;
-
+/*
+* Klasse car
+* Author: Par-Kings
+* Version: 4-2-2017
+*/
 public abstract class Car {
 
     private Location location;
@@ -52,5 +56,9 @@ public abstract class Car {
         minutesLeft--;
     }
     
+    
+    /*
+     * haalt kleur op voor auto.
+     */
     public abstract Color getColor();
 }
