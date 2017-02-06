@@ -25,8 +25,8 @@ public class MainWindow implements ActionListener {
     private int numberOfRows;
     private int numberOfPlaces;
     private int numberOfOpenSpots;
-    private JFrame mainwindow;
     private Car[][][] cars;
+    private JFrame mainwindow;
     private Model model;
     private ActionEvent event;
 
@@ -156,11 +156,19 @@ public class MainWindow implements ActionListener {
         updateView();
     }
  
-   
+    /**
+     * setActionEvent: stelt actionEvent vast.
+     * @param e
+     */
     
     public void setActionEvent(ActionEvent e) {
         event = e;
     }
+    
+    /**
+     * Deze methode haalt het ActionEvent op.
+     * @return actionEvent
+     */
     
     public ActionEvent getActionEvent() {
         return event;
@@ -201,6 +209,7 @@ public class MainWindow implements ActionListener {
         };        
         newThread.start();    
     }
+    
     //Text voor verschillende GUI functies
     public void updateView() {
         carParkView.updateView();
@@ -213,22 +222,46 @@ public class MainWindow implements ActionListener {
         Tijd.setText("Dagen: " +" " + String.valueOf(model.getDag()) + " " + "Uren: " + " " + String.valueOf(model.getUur()) + " " + "Minuten: " + " " + String.valueOf(model.getMinuut()));
     }
     
+    /**
+     * haalt aantal verdiepingen op.
+     * @return numberOfFloors
+     */
+    
 	public int getNumberOfFloors() {
         return numberOfFloors;
     }
 
+	/**
+	 * haalt aantal rijen op.
+	 * @return numberOfRows
+	 */
+	
     public int getNumberOfRows() {
         return numberOfRows;
     }
 
+    /**
+     * haalt het totaalaantal plekken op.
+     * @return numberOfPlaces
+     */
+    
     public int getNumberOfPlaces() {
         return numberOfPlaces;
     }
 
+    /**
+     * haalt aantal open plekken in de parkeergarage terug.
+     * @return numberOfOpenSpots
+     */
+    
     public int getNumberOfOpenSpots(){
     	return numberOfOpenSpots;
     }
-    
+    /**
+     * Haalt locatie van auto op.
+     * @param location
+     * @return null
+     */
     public Car getCarAt(Location location) {
         if (!locationIsValid(location)) {
             return null;
@@ -236,6 +269,13 @@ public class MainWindow implements ActionListener {
         return cars[location.getFloor()][location.getRow()][location.getPlace()];
     }
 
+    /**
+     * methode setCarAt zet een auto op een bepaalde locatie
+     * @param location
+     * @param car
+     * @return true
+     */
+    
     public boolean setCarAt(Location location, Car car) {
         if (!locationIsValid(location)) {
             return false;
@@ -250,6 +290,12 @@ public class MainWindow implements ActionListener {
         return false;
     }
 
+   /**
+    * Methode removeCarAt haalt auto weg van een bepaalde locatie
+    * @param location
+    * @return car
+    */
+    
     public Car removeCarAt(Location location) {
         if (!locationIsValid(location)) {
             return null;
@@ -293,6 +339,10 @@ public class MainWindow implements ActionListener {
         return null;
     }
 
+    /*
+     * methode tick schuift de simulatie 1 stap/minuut op. Hiermee worden location en car geüpdate.
+     */
+    
     public void tick() {
         for (int floor = 0; floor < getNumberOfFloors(); floor++) {
             for (int row = 0; row < getNumberOfRows(); row++) {
