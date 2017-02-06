@@ -4,6 +4,12 @@ import java.awt.event.ActionEvent;
 
 import model.Model;
 
+/*
+ * klasse controller
+ * Author: par-kings
+ * version: 4-2-2017
+ */
+
 public class Controller extends AbstractController {
 	
 	
@@ -15,6 +21,8 @@ public class Controller extends AbstractController {
 	 * Constructor for the controller.
 	 * @param model the model
 	 */
+	
+	
 	public Controller(Model model) {
 		setModel(model);		
 	}
