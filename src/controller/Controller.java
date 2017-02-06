@@ -46,12 +46,16 @@ public class Controller extends AbstractController {
 		}
 		//command quit: sluit de simulator.
 		if(e.getActionCommand().equals("quit")){
-			model.pause();
+			model.quit();
 		}
 		//command step: zorgt ervoor dat de simulator met 1 minuut wordt opgeschoven.
 		if(e.getActionCommand().equals("step")){
-			model.pause();
+			model.step();
 		}
+		if(e.getActionCommand().equals("uur")){
+			model.uur();
+		}
+		
 	}
 	
 }
