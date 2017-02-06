@@ -1,18 +1,16 @@
 package model;
 import java.awt.*;
-
 import java.util.Random;
-
 import view.*;
-import controller.Controller;
 
-import javax.swing.*;
+
+
 /*
 * Klasse model
 * Author: Par-Kings
 * Version: 4-2-2017
 */
-public class Model {
+public class Model{
 
 	private static final String AD_HOC = "1";
 	private static final String PASS = "2";
@@ -62,8 +60,9 @@ public class Model {
         exitCarQueue = new CarQueue();
         simulatorView = new MainWindow(3, 6, 30, this);     
     }
-    /*
+    /**
     * Methode om opbrengst weer te geven.
+    * @return opbrengst
     */
     public int getOpbrengst() {
         return opbrengst;
