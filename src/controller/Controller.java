@@ -35,17 +35,20 @@ public class Controller extends AbstractController {
 	
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		//commando start: zorgt dat de simulator begint met runnen.
 		if(e.getActionCommand().equals("start")){
-			System.out.println("Start has been pressed");
 			model.start();
 		}
+		//commando pause: zorgt ervoor dat boolean run wordt ingesteld op false.
+		//de simulator kan dan niet runnen.
 		if(e.getActionCommand().equals("pause")){
 			model.pause();
 		}
+		//command quit: sluit de simulator.
 		if(e.getActionCommand().equals("quit")){
 			model.pause();
 		}
+		//command step: zorgt ervoor dat de simulator met 1 minuut wordt opgeschoven.
 		if(e.getActionCommand().equals("step")){
 			model.pause();
 		}

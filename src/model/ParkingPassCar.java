@@ -31,7 +31,7 @@ public class ParkingPassCar extends Car {
     }
     
     /**
-     * 
+     * haalt de kleur op voor ParkingPassCars.
      * @return retourneert de kleur.
      */
     public Color getColor(){
